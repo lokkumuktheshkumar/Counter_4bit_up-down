@@ -109,7 +109,7 @@ endmodule
  endmodule
 ```
 
-### To Launch Simulation tool
+### To Launch Simulation tool 
 	linux:/> nclaunch -new&            // “-new” option is used for invoking NCVERILOG for the first time for any design
 
 	linux:/> nclaunch&                 // On subsequent calls to NCVERILOG
