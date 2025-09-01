@@ -56,7 +56,20 @@ Functional Simulation:
 
 ### Verilog code for 4-Bit Up-Down Counter:
 
-*/Program  for  4-Bit Up-Down Counter
+`timescale 1ns / 1ns
+module counter(clk,m,rst,count);
+input clk,m,rst
+output reg [3:0] count;
+always@(posedge clk or negedge rst)
+begin
+if (!rs
+count=0;
+else if(m)
+count=count+1;
+else
+count=count-1;
+end
+endmodule
 
 	Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
@@ -66,7 +79,7 @@ Functional Simulation:
 
 ### Test-bench code for 4-Bit Up-Down Counter:
 
-*/Test bench Program  for  4-Bit Up-Down Counter
+
 
 ### To Launch Simulation tool
 	linux:/> nclaunch -new&            // “-new” option is used for invoking NCVERILOG for the first time for any design
@@ -74,12 +87,16 @@ Functional Simulation:
 	linux:/> nclaunch&                 // On subsequent calls to NCVERILOG
 
 It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple step
+<img width="1913" height="1190" alt="Screenshot 2025-09-01 091858" src="https://github.com/user-attachments/assets/abe05395-fc5f-446d-8afe-8d99ad79517d" />
+
 
 ## Fig 3: Setting Multi-step simulation
 
 Select Multiple Step and then select “Create cds.lib File” as shown in below figure
 
 Click the cds.lib file and save the file by clicking on Save option
+<img width="1914" height="1198" alt="Screenshot 2025-09-01 091948" src="https://github.com/user-attachments/assets/0edd981f-559f-4a51-9622-25a600e746c9" />
+
 
 ## Fig 4: cds.lib file Creation
 
@@ -88,6 +105,8 @@ Click the cds.lib file and save the file by clicking on Save option
 	Select “Don’t include any libraries (verilog design)” from “New cds.lib file” and click on “OK” as in below figure
 
 	We are simulating verilog design without using any libraries
+<img width="1915" height="1196" alt="Screenshot 2025-09-01 092002" src="https://github.com/user-attachments/assets/e6138448-0268-4f6b-8820-1d99af3d9bb9" />
+
 
 ## Fig 5: Selection of Don’t include any libraries
 
@@ -122,6 +141,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
+
 
 ## Fig 7: Compiled database in worklib
 
